@@ -1,0 +1,14 @@
+#Enabling rewrite engine 
+RewriteEngine On
+
+#If the file specified in browser url is not found then follow the rule below.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#If the directory is not found then follow the rule below.
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+#^(.*)$  - Requested file of any extension will be routed to index.php/$1 
+#QSA     - The QSA flag means to append an existing query string after the URI has been rewritten
+#L 		 - Means if the rule matches, don't process any more RewriteRules below this one.
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
