@@ -85,8 +85,10 @@ $application_path = 'application';
 	define('KERNELPATH', BASEPATH.'/kernel/');
 
 	// Path to application folder
-	define('APPPATH', BASEPATH.$application_path.'/');
+	define('APPPATH', str_replace("\\", "/", $application_path));
 
+	// Path to application controllers folder
+	define('APPCONTROLLERS', APPPATH.'/controllers');
 	// Path to database folder
 	define('DBPATH', BASEPATH.'/database/');
 	
@@ -97,11 +99,11 @@ $application_path = 'application';
  *  
  * 
  */
-
+echo APPPATH;
 require_once(KERNELPATH.'core.php');
 
 echo " Hello from Index";
- 
+
 /*
  * END OF index.php FILE
  * LOCATION /index.php

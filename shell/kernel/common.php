@@ -1,23 +1,29 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+echo "Hi from common <br/>";
+
 /**
- * -----------------------------
- * Loading Database 
+ * ----------------------------- 
+ * Loading Configuration 
  * -----------------------------
  */
-
-require(DBPATH.'/db_core.php');
+require(KERNELPATH.'/config.php');
 
 /**
- * 
+ * Function to include classes 
  */
 if (!function_exists('class_loader')) 
 {
-		function &class_loader($classname)
-		{
-
-			$result = "Class Loader ".$classname;	
-
-			return $result;
+		function class_loader($classpath, $classname)
+		{	
+			require(strtolower($classpath.$classname.EXT));	
 		}	
 }
+
+/**
+ * ----------------------------- 
+ * Loading MVC Classes  
+ * -----------------------------
+ */
+require(KERNELPATH.'/loader.php');
+
