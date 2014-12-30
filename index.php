@@ -99,7 +99,6 @@ $application_path = 'application';
  *  
  * 
  */
-echo APPPATH;
 require_once(KERNELPATH.'core.php');
 
 echo " Hello from Index";
