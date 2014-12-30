@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-echo "Hi from loader <br />";
+//echo "Hi from loader <br />";
+
 /**
  * [Including all core classes]
  * @var [array]
