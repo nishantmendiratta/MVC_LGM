@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-echo "Hi from common <br/>";
+//echo "Hi from common <br/>";
 
 /**
  * ----------------------------- 

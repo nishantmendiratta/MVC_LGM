@@ -6,6 +6,6 @@
 	<title></title>
 </head>
 <body>
-	Hi from view 
+	Hi from Welcome View  
 </body>
 </html>
