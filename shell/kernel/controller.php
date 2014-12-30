@@ -3,7 +3,9 @@
 echo "Hi from controller <br />";
 
 class lgm_controller{ 	
- 			function view(){
+
+ 			function view($view_path,$params){
+ 				echo $params;
 				echo "<br/> LGM VIEW <br/>";
 		}	
 }
