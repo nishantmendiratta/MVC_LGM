@@ -89,6 +89,10 @@ $application_path = 'application';
 
 	// Path to application controllers folder
 	define('APPCONTROLLERS', APPPATH.'/controllers');
+
+	// Path to application views folder
+	define('APPVIEWS', APPPATH.'/views');
+
 	// Path to database folder
 	define('DBPATH', BASEPATH.'/database/');
 	

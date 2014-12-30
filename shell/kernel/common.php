@@ -14,11 +14,11 @@ require(KERNELPATH.'/config.php');
  */
 if (!function_exists('class_loader')) 
 {
-		function class_loader($classpath, $classname)
+		function class_loader($classpath, $classname, $params = null)
 		{	
 			require(strtolower($classpath.$classname.EXT));	
 		}	
-}
+} 
 
 /**
  * ----------------------------- 

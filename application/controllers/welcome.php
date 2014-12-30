@@ -1,6 +1,6 @@
  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-echo "Hi From Welcome";
+//echo "Hi From Welcome";
 
  //$controller_name = 'welcome';
  //$controller_function_name = 'index';
@@ -28,7 +28,7 @@ class welcome extends lgm_controller {
 	 */
 	public function index()
 	{
-		$this->view('Data');
+		$this->view('welcome_message','Data');
 		//$this->load->view('welcome_message');
 	}
 }
