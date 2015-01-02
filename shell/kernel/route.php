@@ -52,11 +52,15 @@ if (isset($controller_name)) {
 if (class_exists($controller_name)) 
 {
 	$app = new $controller_name;
-	/**
-	 * Calling the function of respective controller
-	 */
-	//if(function_exists($controller_function_name))
+	
+	// Calling the function of respective controller if it exists or not
+	if(method_exists($app,$controller_function_name))
+	{
 		$app->$controller_function_name();
-	//else
-		//echo "Function doesn't exist";
+	}	
+	else
+	{
+		echo "Function doesn't exist";
+	}
+		
 }
