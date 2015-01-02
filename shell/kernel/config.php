@@ -8,7 +8,7 @@
  * @var array
  */
 $core_classes = array(
-				false => array('controller','route'),
+				false => array('controller','model','lgm_mvc','route'),
 				DBPATH => '/db_core' 
 				);
 /**

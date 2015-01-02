@@ -49,9 +49,14 @@ if (isset($controller_name)) {
  * [$app Creating an object which will initialize the controller]
  * @var [object]
  */
-$app = new $controller_name;	
-
-/**
- * Calling the function of respective controller
- */
-$app->$controller_function_name();
+if (class_exists($controller_name)) 
+{
+	$app = new $controller_name;
+	/**
+	 * Calling the function of respective controller
+	 */
+	//if(function_exists($controller_function_name))
+		$app->$controller_function_name();
+	//else
+		//echo "Function doesn't exist";
+}

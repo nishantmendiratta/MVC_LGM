@@ -2,6 +2,8 @@
 
 //echo "Hi from common <br/>";
 
+$app = new stdClass();
+
 /**
  * ----------------------------- 
  * Loading Configuration 
@@ -16,7 +18,14 @@ if (!function_exists('class_loader'))
 {
 		function class_loader($classpath, $classname, $params = null)
 		{	
-			require(strtolower($classpath.$classname.EXT));	
+			if(!file_exists(strtolower($classpath.$classname.EXT)))
+			{
+				echo 'Invalid controller name';	
+				return;
+			}
+
+			require(strtolower($classpath.$classname.EXT));
+				
 		}	
 } 
 

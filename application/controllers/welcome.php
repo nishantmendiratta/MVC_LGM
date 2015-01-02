@@ -1,9 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-//echo "Hi From Welcome <br />";
+echo "Hi From Welcome <br />";
 
-class welcome extends lgm_controller {
+class welcome
+{	
+	public $load;
 
+	function __construct()
+	{
+		$this->load = new lgm_mvc;
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,11 +25,14 @@ class welcome extends lgm_controller {
 	 * map to /index.php/welcome/<method_name>
 	 * 
 	 */
+	
 	public function index()
-	{
-		$this->view('welcome_message','(View Data)');
-		//$this->load->view('welcome_message');
+	{	
+		//echo $this->load->get_data();
+		$this->load->model('get_data','');
+		$this->load->view('welcome_message','(View Data)');
 	}
+
 }
 
 /* End of file welcome.php */

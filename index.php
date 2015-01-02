@@ -28,7 +28,7 @@ if (defined('ENVIRONMENT'))
 		switch (ENVIRONMENT) {
 			case 'Dev':
 				error_reporting( E_ALL );
-    		ini_set( "display_errors", 1 );
+    			ini_set( "display_errors", 1 );
 				break;
 			
 			case 'Test':
@@ -92,6 +92,9 @@ $application_path = 'application';
 
 	// Path to application views folder
 	define('APPVIEWS', APPPATH.'/views');
+
+	// Path to application models folder
+	define('APPMODELS', APPPATH.'/models');
 
 	// Path to database folder
 	define('DBPATH', BASEPATH.'/database/');
