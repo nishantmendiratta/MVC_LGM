@@ -3,7 +3,7 @@
 //echo "Hi from route <br />";
 
 /**
- * [$actual_link description]
+ * [$actual_link Extracting controller name, function name and parametners]
  * @var string
  */
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
