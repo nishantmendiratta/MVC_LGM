@@ -1,11 +1,11 @@
 <?php
-	echo $params;
+	echo "View Params : " . $params . "<br/>";
 ?>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-	Hi from Welcome View  
+	View Body : Hi from Welcome View - Inside View
 </body>
 </html>

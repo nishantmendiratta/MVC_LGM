@@ -25,6 +25,9 @@ class welcome extends lgm_mvc
 		// This function accepts min 1 param i.e model_name and 2nd param includes the params 
 		$this->load->model('welcome_message_model');
 
+		// This will call the method included in welcome model
+		$this->load->method->get();
+
 		// This is an example to load a view 
 		// This function accepts min 1 param i.e view_name and 2nd param includes the params 
 		$this->load->view('welcome_message_view','(View Data)');

@@ -16,6 +16,7 @@
  */
 class lgm_controller
 { 		
+		//public $model;
 		/**
 		 * [view This function is called from controller to set a view]
 		 * @param  [string] $view_name [This param will accept view name]

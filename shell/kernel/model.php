@@ -15,6 +15,9 @@
  */
 class lgm_model extends lgm_controller
 {	
+	// Class variable used to call model methods
+	public $method;
+
 	/**
 	 * [model Called from application/controller]
 	 * @param  [string] $model_name [This variable accepts model name]
@@ -22,9 +25,12 @@ class lgm_model extends lgm_controller
 	 * @return [none]             	[none]
 	 */
 	function model($model_name,$params=null)
-	{	
+	{		
 			// This will call core load model function in this class
 			$this->load_model($model_name,$params);
+
+			// This will be used to call model methods
+			$this->method = new $model_name;
 	}
 
 	/**
@@ -38,4 +44,5 @@ class lgm_model extends lgm_controller
 		// This will fetch model with name recieved, from /application/models folder
 		class_loader(APPMODELS.'/',$model_name,$params);
 	}
+
 }
