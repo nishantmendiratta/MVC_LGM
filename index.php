@@ -108,7 +108,7 @@ $application_path = 'application';
  */
 require_once(KERNELPATH.'core.php');
 
-echo " Hello from Index";
+//echo " Hello from Index";
 
 /*
  * END OF index.php FILE

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-echo "Hi from core mvc <br />";
+echo "Using default controller - index.php/welcome/index <br/>";
 
 /**
  * -----------------------------
