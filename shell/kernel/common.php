@@ -2,8 +2,6 @@
 
 //echo "Hi from common <br/>";
 
-$app = new stdClass();
-
 /**
  * ----------------------------- 
  * Loading Configuration 

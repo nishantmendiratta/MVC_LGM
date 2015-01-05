@@ -5,15 +5,17 @@
 /**
  * -----------------------------
  * Core controller 
- * -----------------------------
+ * ----------------------------- 
  *
+ * This class helps in multilevel inheritance - 
+ *
+ * lgm_controller is extended by lgm_model and lgm_mvc is extending lgm_model
+ * 
  * This controller will be extended by every new controller created in application folder
  * 
  */
 class lgm_controller
 { 		
-		public $load;
-
 		/**
 		 * [view This function is called from controller to set a view]
 		 * @param  [string] $view_name [This param will accept view name]
@@ -36,10 +38,5 @@ class lgm_controller
 		{	
 			// This will fetch view with name recieved from /application/views folder
 			class_loader(APPVIEWS.'/',$view_name,$params);
-		}
-
-		function get_data()
-		{
-			return "get_data_controller";
 		}
 }

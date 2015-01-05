@@ -1,22 +1,41 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-echo "Hi from core model <br />";
+//echo "Hi from core model <br />";
 
+/**
+ * -----------------------------
+ * Core model 
+ * -----------------------------
+ *
+ * This class helps in multilevel inheritance - 
+ *
+ * lgm_controller is extended by lgm_model and lgm_mvc is extending lgm_model
+ * 
+ * This class includes all core model functions 
+ */
 class lgm_model extends lgm_controller
-{
-	function model($model_name,$params)
-	{
+{	
+	/**
+	 * [model Called from application/controller]
+	 * @param  [string] $model_name [This variable accepts model name]
+	 * @param  [array] 	$params     [This variable accepts model params]
+	 * @return [none]             	[none]
+	 */
+	function model($model_name,$params=null)
+	{	
+			// This will call core load model function in this class
 			$this->load_model($model_name,$params);
 	}
 
-	function load_model($model_name,$params)
+	/**
+	 * [load_model Core load model function to include file]
+	 * @param  [string] $model_name [This variable accepts model name]
+	 * @param  [array] 	$params     [This variable accepts model params]
+	 * @return [none]             	[none]
+	 */
+	function load_model($model_name,$params=null)
 	{
-		// This will fetch view with name recieved from /application/views folder
+		// This will fetch model with name recieved, from /application/models folder
 		class_loader(APPMODELS.'/',$model_name,$params);
 	}
-
-	function get_data_model(){
-		echo "get_data_model <br />";
-	}
-
 }
