@@ -34,4 +34,5 @@ class lgm_mvc extends lgm_model
 		// Class variable gets instance of mvc
 		$this->load = new lgm_model;
 	}
+
 }
