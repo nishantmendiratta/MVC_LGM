@@ -41,6 +41,7 @@ if (!isset($controller_name))
 		$route[$controller_name] = $controller_function_name;
 }
 
+
 if (isset($controller_name)) {
 	class_loader(APPCONTROLLERS.'/',$controller_name);
 }
@@ -60,7 +61,7 @@ if (class_exists($controller_name))
 	}	
 	else
 	{
-		echo "Function doesn't exist";
+		echo "Invalid Function Name : " . $controller_function_name;
 	}
 		
 }

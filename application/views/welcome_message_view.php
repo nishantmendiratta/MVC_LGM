@@ -1,4 +1,5 @@
 <?php
+	if(isset($params))
 	echo "View Params : " . $params . "<br/>";
 ?>
 <html>

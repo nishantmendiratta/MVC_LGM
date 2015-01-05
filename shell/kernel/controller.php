@@ -23,7 +23,7 @@ class lgm_controller
 		 * @param  [array] 	$params    [This will include all data of variables used in view]
 		 * @return [none]            	 [none]
 		 */
- 		function view($view_name,$params)
+ 		function view($view_name,$params=null)
  		{		
  			// Calling load view function of this class
  			$this->load_view($view_name,$params);
@@ -35,7 +35,7 @@ class lgm_controller
 		 * @param  [type] $params    [view data received from controller]
 		 * @return [none]            [none]
 		 */
-		function load_view($view_name,$params)
+		function load_view($view_name,$params=null)
 		{	
 			// This will fetch view with name recieved from /application/views folder
 			class_loader(APPVIEWS.'/',$view_name,$params);

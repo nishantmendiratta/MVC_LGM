@@ -18,7 +18,7 @@ if (!function_exists('class_loader'))
 		{	
 			if(!file_exists(strtolower($classpath.$classname.EXT)))
 			{
-				echo 'Invalid controller name';	
+				echo 'Invalid Class Name : ' . $classname;	
 				return;
 			}
 
