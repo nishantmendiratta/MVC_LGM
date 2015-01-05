@@ -4,6 +4,8 @@
 
 /**
  * Welcome Model 
+ *
+ * Note : Class name should be same as file name
  */
 class welcome_message_model extends lgm_model
 {
