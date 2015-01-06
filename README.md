@@ -7,7 +7,11 @@ MVC Stands for Model, View, Controller. It's a software architectural pattern fo
 </ul>
 ######NOTE :- Model and View can't communicated directly.
 
-
+#####Directory Structure
+<ul>
+<li>root[files] > .htaccess,index.php</li>
+<li>root[folders] > application,shell</li>
+</ul>
 
 
 
