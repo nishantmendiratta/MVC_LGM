@@ -50,55 +50,14 @@ if (defined('ENVIRONMENT'))
  *
  * NOTE : Includes folder path only if shell folder is not in same directory as this file
  */
-
 $shell_path = 'shell';
 
-/**
- * -----------------------------
- * Application Folder Name
- * -----------------------------
- *
- * This variable will include the name of application folder 
- *
- * NOTE : Includes folder path only if application folder is not in same directory as this file
- */
+// Path to the shell folder
+define('BASEPATH', str_replace("\\", "/", $shell_path));
 
-$application_path = 'application';
+// Path to core file in kernel folder 
+define('KERNELPATH', BASEPATH.'/kernel/');
 
-/**
- * -----------------------------
- * Setting main path constraints
- * -----------------------------
- */
-	
-	// The name of THIS file
-	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-
-	// The PHP file extension
-	// this global constant is deprecated.
-	define('EXT', '.php');
-
-	// Path to the shell folder
-	define('BASEPATH', str_replace("\\", "/", $shell_path));
-
-	// Path to core file in kernel folder 
-	define('KERNELPATH', BASEPATH.'/kernel/');
-
-	// Path to application folder
-	define('APPPATH', str_replace("\\", "/", $application_path));
-
-	// Path to application controllers folder
-	define('APPCONTROLLERS', APPPATH.'/controllers');
-
-	// Path to application views folder
-	define('APPVIEWS', APPPATH.'/views');
-
-	// Path to application models folder
-	define('APPMODELS', APPPATH.'/models');
-
-	// Path to database folder
-	define('DBPATH', BASEPATH.'/database/');
-	
 /**
  * -----------------------------
  * Loading Bootstrap File
